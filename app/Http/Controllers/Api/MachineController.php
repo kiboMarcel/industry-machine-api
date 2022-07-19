@@ -19,7 +19,7 @@ class MachineController extends Controller
     {
         //
         //return Machine::all();
-        return MachineResource::collection(Machine::all());
+        return MachineResource::collection(Machine::with('category')->get());
     }
 
     /**
